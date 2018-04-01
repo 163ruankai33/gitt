@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script> 
+  function compute(p){     
+  str1=Number(document.getElementById("txt1").value);    
+  str2=Number(document.getElementById("txt2").value);    
+      
+  var result;     
+  switch(p) {       
+  case "+":         result=str1+str2;         break;       
+  case "-":        result=str1-str2;         break;       
+  case "*":        result=str1*str2;         break;       
+  case "/":         
+  if(str2==0){           
+  alert("除数不能为0！");           
+ result='';         }
+  else{         result  =str1/str2;         }         break;     }     
+  document.getElementById("result").value=result;   }   
+  </script> 
+
+</head>
+
+<body>
+第一个数：<input type="text" id="txt1"/> <br />  
+第二个数：<input type="text" id="txt2"/> <br /> <br/>     
+<input type="button" value="+" onclick="compute('+')" />
+<input type="button" value="-" onclick="compute('-')" />
+  <input type="button" value="*" onclick="compute('*')" />
+  <input type="button" value="/" onclick="compute('/')" />
+  <br/><br/>
+ 
+结果：<input type="text" id="result"/> 
+
+
+
+</body>
+</html>
